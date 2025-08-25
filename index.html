@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dake Baby Games | Home</title>
+        <link rel="stylesheet" href="css/main.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+        <script src="js/main.js"></script>
+    </head>
+
+    <body onload="checkCookie()">
+        <div class="header">
+            <a href="index.html"><img id="logoIcon" alt="DBG Logo - Home" src="imgs/logoIcon.png"></a>
+
+            <nav class="topbar">
+                <a id="selected">Home</a>
+                
+                <a>Game Hub</a>
+                
+                <a>Contact</a>
+                
+                <a>Report Form</a>
+            </nav>
+
+            <button class="darkmodebutton" type="button" onclick="toggleDarkMode()"><img src="imgs/moon.png" class="darkmodeimage"></button>
+        </div>
+
+        <button class="igLogo" onclick="toggleSocialMenu()" type="button">
+            <img src="imgs/igLogo.png" class="igLogo">
+        </button>
+
+        <div id="socialMenu" class="hidden">
+            <button onclick=" window.open('https://www.instagram.com/@dakebabygames', '_blank')" type="button"><img src="imgs/igLogo.png"></button>
+            <button onclick=" window.open('https://www.tiktok.com/@dake.baby.games', '_blank')" type="button"><img src="imgs/tiktokLogo.png"></button>
+        </div>
+
+       <div class="mainSection">
+            <h2 id="mainTitle">Dake Baby Games</h2>
+            
+            <button class="gameHubButton"><h2>GAME HUB</h2></button>
+            
+            <span class="scrollDots"></span>
+       </div>
+
+       <div class="secondaryDiv">
+            <img src="imgs/logoIcon.png" class="frontPageIMG">
+            <div class="aboutDBG">
+                <h2 style="font-weight: 800;">What Is Dake Baby Games</h2>
+                <p>
+                Welcome to DakeBabyGames! <br>
+                <br>
+                The only games site free from the oppression of Denver Public Schools. <br>
+                <br>
+                Please enjoy the stupid baby elf thing that is this site's mascot which is now named Mildew by popular vote! Make sure to leave an honest review of my website and allow it to be put up on the DBG archive! 
+                <br>
+                <br>
+                If you want a game added to this site, let me know through the request form (Link is on the Game Hub)
+
+                If this site is blocked, first check your spelling and if that doesn't work, try tinyurl.com/dakebabygames1</p>
+            </div>
+       </div>
+
+       <div id="rivalDIV">
+            <div id="rivalInfo">
+                <h2 style="font-weight: 800;">Our Rival</h2>
+                <p>Our rival, JudeSeniorGames, is such a drag—their site is slow, their games feel ancient, and the whole vibe is stuck in the past. Meanwhile, DakeBabyGames is the total opposite: fast, fresh, and full of excitement. We’re the future of gaming, and they’re barely hanging on.</p>
+            </div>
+            <img src="imgs/judeSeniorGames.png" class="frontPageIMG">
+       </div>
+
+       <div class="reviewDiv">
+            <h3>Reviews</h3>
+            <p>reviews, blah, blah, blah. we have good reviews.</p>
+       </div>
+
+    </body>
+</html>

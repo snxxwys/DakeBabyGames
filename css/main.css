@@ -1,0 +1,397 @@
+:root
+{
+    --spinSpeed: 3s;
+    --h2Size: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 235, 235);
+    transition: .3s ease;
+
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hidden
+{
+    display: none !important;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+a
+{
+    cursor: pointer;
+}
+
+.darkmode
+{
+    background-color: rgb(42, 42, 42);
+    color: rgb(235, 235, 235);
+    transition: all .3s ease;
+}
+
+.header
+{
+    background-color: rgb(235, 235, 235);
+    overflow: hidden;
+    top: 0;
+    padding: 20px 10px;
+    width: rh;
+    height: 50px;
+    margin: 10px auto;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+.darkmode .header
+{
+    background-color: rgb(42, 42, 42);
+    transition: all .3s ease;
+}
+
+.topbar
+{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 0 auto;
+    color: #121212; 
+}
+
+.darkmode .topbar
+{
+    color: #d7d7d7
+}
+
+#selected
+{
+    font-weight: 800;
+    color: #121212;
+}
+
+.darkmode #selected
+{
+    color: rgb(235, 235, 235);
+}
+
+.darkmodeimage {
+    filter: invert(0%);
+    transition: filter 0.3s ease;
+    width: 40px
+}
+
+body.darkmode .darkmodeimage {
+    filter: invert(100%);
+    width: 43px
+}
+
+.darkmodebutton
+{
+    border: 0;
+    background-color: transparent;
+}
+
+#logoIcon
+{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.igLogo
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    background: #222222;
+    border: 6px solid #222222;
+    border-radius: 18px;
+    transition: transform .2s ease-out;
+}
+
+div.igLogo
+{
+    background: transparent;
+    border: transparent;
+}
+
+img.igLogo:hover
+{
+    transform: scale(105%);
+}
+
+#socialMenu
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    z-index: 100;
+    background:linear-gradient(0deg,rgb(21, 21, 21) 0%, rgb(40, 40, 40) 20%, rgb(40, 40, 40) 80%, rgba(21, 21, 21, 1) 100%);
+    border-radius: 20px;
+    border: 3px solid #d7d7d7;
+    box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    -moz-box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#socialMenu button
+{
+    width: 100px;
+    height: 100px;
+    border: transparent;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#socialMenu img
+{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+
+    background: 
+    linear-gradient(#313131) padding-box,
+    linear-gradient(to right, #00ccff, #d500f9) border-box;
+    border-radius: 50em;
+    border: 4px solid transparent;
+
+    padding: 10px;
+    border-radius: 18px;
+    transition: transform .2s ease-out;
+}
+
+#socialMenu img:hover
+{
+    transform: scale(105%);
+}
+
+.mainSection
+{
+    background: linear-gradient(0deg,rgb(21, 21, 21) 0%, rgb(40, 40, 40) 20%, rgb(40, 40, 40) 80%, rgba(21, 21, 21, 1) 100%);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle
+{
+    color: rgb(226, 226, 226);
+    text-shadow: 0px 0px 20px rgba(26,26,26,0.76);
+    font-size: 60px;
+    z-index: 1;
+    margin-top: 0px;
+    transition: .3s ease-out;
+    cursor: default;
+}
+
+#mainTitle:hover
+{
+    transform: scale(110%);
+}
+
+.gameHubButton
+{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 650px;
+    border: transparent;
+    z-index: 2;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.gameHubButton:hover
+{
+    transform: scale(110%);
+    --spinSpeed: 1s;
+    --h2Size: 110%;
+}
+
+.gameHubButton:hover h2
+{
+    animation: pulseText 1s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+    0%, 100% {
+        scale: 100%;
+    }
+    50% {
+        scale: var(--h2Size);
+    }
+}
+
+.gameHubButton h2
+{
+    color: rgb(226, 226, 226);
+    text-shadow: 0px 0px 20px rgba(26,26,26,0.76);
+    font-size: 40px;
+    z-index: 1;
+    transition: scale 0.3s ease-in-out;
+}
+
+.gameHubButton::before
+{
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate var(--spinSpeed) linear infinite;
+    filter: brightness(100%);
+}
+
+.gameHubButton::after
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(#c7c7c777, #ffffff77);
+    backdrop-filter: blur(10px);
+    inset: 10px;
+    border-radius: 100px; 
+    filter: saturate(500%);
+}
+
+@keyframes rotate
+{
+    from
+    {
+        transform: rotate(0deg)
+    }
+    to
+    {
+        transform: rotate(360deg)
+    }
+}
+
+.scrollDots
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-image: radial-gradient(circle at 5px 5px, #b7b7b7 2px, transparent 3px);
+    background-size: 50px 50px;
+    z-index: 0;
+
+    animation: move-background 1s linear infinite;
+}
+
+@keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50px 50px;
+  }
+}
+
+.secondaryDiv
+{
+    display: flex;
+    height: 400px;
+}
+
+.frontPageIMG
+{
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.aboutDBG
+{
+    padding: 10px;
+    margin: 10px
+}
+
+#rivalDIV
+{
+    background-color: #e0bca4;
+    height: 230px;
+    display: flex;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+#rivalDIV .frontPageIMG
+{
+    right: 0px;
+    margin-left: auto;
+    margin-top: 15px;
+    width: 180px;
+    height: 180px;
+    animation: crab 5s linear infinite;
+}
+
+@keyframes crab
+{
+    0%, 100% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: 10deg;
+    }
+    75% {
+        rotate: -10deg;
+    }
+}
+
+#rivalInfo
+{
+    padding: 0 10px;
+    margin: 10px;
+    width: 800px;
+    color: #121212;
+}
+
+.reviewDIV
+{
+    background-color: #a4cce0;
+    height: 230px;
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+}
