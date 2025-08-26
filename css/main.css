@@ -404,28 +404,36 @@ img.igLogo:hover
     padding: 20px;
     overflow: hidden;
     display: flex;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 .reviewDiv button
 {
-    width: 500px;
-    height: 130px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition: .3s all linear;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #2f7ae3;
+    height: 58px;
+    align-self: center;
     margin-left: auto;
-    border: transparent;
-    border-radius: 100px;
-    font-size: 40px;
-    font-weight: 800;
-    background: #bbd0d5;
-    border: 8px solid #222222;
-    color: #222222 !important;
-    transition: .2s ease-out;
-    transform: scale(90%);
 }
 
 .reviewDiv button:hover
 {
-    transform: scale(100%);
+    transform: scale(1.04);
+    background-color: #4d8ee9
 }
 
 .reviews
@@ -457,11 +465,14 @@ img.igLogo:hover
     transition: all .2s ease-out;
 
     border-radius: 20px;
+
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.61); 
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.61);
 }
 
 .reviews span:hover
 {
-    transform: scale(107%);
+    transform: scale(104%);
 }
 
 .reviews span img
