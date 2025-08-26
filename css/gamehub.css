@@ -215,89 +215,25 @@ img.igLogo:hover
 
 #mainTitle
 {
-    color: rgb(226, 226, 226);
+    color: transparent;
     text-shadow: 0px 0px 20px rgba(26,26,26,0.76);
     font-size: 60px;
     z-index: 1;
-    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
     transition: .3s ease-out;
     cursor: default;
+    transform: scale(140%);
+    background-image: linear-gradient(#00ccff, #e862ff);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 #mainTitle:hover
 {
-    transform: scale(110%);
-}
-
-.gameHubButton
-{
-    display: flex;
-    position:relative;
-    justify-content: center;
-    align-items: center;
-    height: 110px;
-    width: 650px;
-    border: transparent;
-    z-index: 2;
-    border-radius: 100px;
-    overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
-    -moz-box-shadow: 2px 0px 44px 8px rgba(0,0,0,0.2);
-    transition: all 0.5s ease-in-out;
-}
-
-.gameHubButton:hover
-{
-    transform: scale(110%);
+    transform: scale(160%);
     --spinSpeed: 1s;
     --h2Size: 110%;
-}
-
-.gameHubButton:hover h2
-{
-    animation: pulseText 1s infinite ease-in-out;
-}
-
-@keyframes pulseText {
-    0%, 100% {
-        scale: 100%;
-    }
-    50% {
-        scale: var(--h2Size);
-    }
-}
-
-.gameHubButton h2
-{
-    color: rgb(226, 226, 226);
-    text-shadow: 0px 0px 20px rgba(26,26,26,0.76);
-    font-size: 40px;
-    z-index: 1;
-    transition: scale 0.3s ease-in-out;
-}
-
-.gameHubButton::before
-{
-    content: '';
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background: linear-gradient(#00ccff, #d500f9);
-    animation: rotate var(--spinSpeed) linear infinite;
-    filter: brightness(100%);
-}
-
-.gameHubButton::after
-{
-    content: '';
-    position: absolute;
-    background: linear-gradient(#c7c7c777, #ffffff77);
-    backdrop-filter: blur(10px);
-    inset: 10px;
-    border-radius: 100px; 
-    filter: saturate(500%);
 }
 
 @keyframes rotate
