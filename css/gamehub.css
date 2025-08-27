@@ -222,32 +222,22 @@ img.igLogo:hover
     cursor: default;
     transform: scale(170%);
 
-    background-image: linear-gradient(
-        270deg,
-        red,
-        orange,
-        yellow,
-        green,
-        blue,
-        indigo,
-        violet,
-        red
-    );
-    background-size: 800% 100%;
-    background-position: 0% 50%;
+    background: linear-gradient(90deg, #edf72a, /* C1 */ #edf72a, /* C2 */ #367cf5, /* C3 */ #367cf5, /* C4 */ #367cf5, /* C5 */ #edf72a, /* C6 */ #edf72a /* C7 */);
+    
+    background-size: 400%;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: animateGradient 10s linear infinite;
+    color: transparent;
+    animation: animateGradient 9.2s linear infinite;
+    transition: transform .3s ease;
 }
 
 @keyframes animateGradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0%;
     }
     100% {
-        background-position: 100% 50%;
+        background-position: 400%;
     }
 }
 
