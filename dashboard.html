@@ -5,10 +5,27 @@
 
         <link rel="stylesheet" href="css/dashboard.css">
 
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <script>
+            document.getElementById("submit").addEventListener("click", async () => {
+            const name = document.querySelector(".newGame input").value;
+            const category = document.querySelector(".newGame select").value;
+            const embed = document.querySelector("#embed").value;
+
+            const game = { name, category, embed };
+
+            await fetch("/api/games", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(game),
+            });
+
+                alert("Game saved!");
+            });
+        </script>
     </head>
 
     <body>
@@ -34,6 +51,8 @@
                 </select>
 
                 <textarea placeholder="Embed Code" id="embed"></textarea>
+
+                <button id="submit">Add Game</button>
             </div>
 
             <div class="newReview">

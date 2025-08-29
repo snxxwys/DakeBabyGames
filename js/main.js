@@ -52,3 +52,17 @@ function toggleSocialMenu() {
 
   socialMenu.classList.toggle("hidden");
 }
+
+async function loadGames() {
+  const res = await fetch("/api/games");
+  const games = await res.json();
+
+  const container = document.getElementById("gameList");
+  container.innerHTML = "";
+
+  games.forEach((game, i) => {
+    const div = document.createElement("div");
+    div.innerHTML = `<a href="game.html?id=${i}">${game.name} (${game.category})</a>`;
+    container.appendChild(div);
+  });
+}

@@ -100,5 +100,18 @@ body
 {
     margin-top: 0;
     width: 430px;
-    height: 180px;
+    height: 140px;
+}
+
+#submit
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    margin-top: 20px;
+    border: transparent;
+    background-color: rgb(70,70,70);
+    color: white;
+    padding: 1px;
 }
