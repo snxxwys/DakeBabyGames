@@ -1,9 +1,9 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
 
 const filePath = path.join(process.cwd(), "games.json");
 
-export default function handler(req, res) {
+module.exports = (req, res) => {
   if (req.method === "GET") {
     const data = fs.readFileSync(filePath, "utf8");
     res.status(200).json(JSON.parse(data));
@@ -21,4 +21,4 @@ export default function handler(req, res) {
   } else {
     res.status(405).end();
   }
-}
+};
