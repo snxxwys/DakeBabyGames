@@ -1,25 +1,6 @@
 <html>
     <head>
-        <title>Dake Baby Games</title>
-
-        <script>
-            async function loadGame() {
-            const params = new URLSearchParams(window.location.search);
-            const id = params.get("id");
-
-            const res = await fetch("/api/games");
-            const games = await res.json();
-
-            const game = games[id];
-            document.getElementById("gameDetail").innerHTML = `
-              <h1>${game.name}</h1>
-              <p>Category: ${game.category}</p>
-                  ${game.embed}
-            `;
-        }
-        loadGame();
-    </script>
-    
+        <title>Dake Baby Games</title> 
     </head>
 
     <body>
