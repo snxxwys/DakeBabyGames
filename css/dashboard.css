@@ -1,0 +1,104 @@
+body
+{
+    background-color: rgb(42, 42, 42);
+    color: rgb(235, 235, 235);
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#title
+{
+    font-size: 30px;
+    width: 500px;
+    padding: 20px;
+}
+
+.newStuff
+{
+    display: flex;
+    width: vw;
+    background: linear-gradient(0deg,rgb(21, 21, 21) 0%, rgb(40, 40, 40) 20%, rgb(40, 40, 40) 80%, rgba(21, 21, 21, 1) 100%);
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.newStuff div
+{
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0px 0px 4px 4px rgba(255,255,255,0.5); 
+    box-shadow: inset 0px 0px 4px 4px rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(38, 39, 39);
+    height: 350px;
+    width: 500px;
+}
+
+.newStuff div input
+{
+    width: 200px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    margin-top: 20px;
+    border: transparent;
+    background-color: rgb(70,70,70);
+    color: white;
+    padding: 10px;
+}
+
+.newStuff div textarea
+{
+    width: 200px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    margin-top: 20px;
+    border: transparent;
+    background-color: rgb(70,70,70);
+    color: white;
+    padding: 10px;
+}
+
+.newStuff div textarea::placeholder 
+{ 
+    color: rgb(205, 205, 205); 
+    padding: 5px;
+}
+
+.newStuff div input::placeholder 
+{ 
+    color: rgb(205, 205, 205); 
+    padding: 5px;
+}
+
+.newStuff div select
+{
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    border: transparent;
+    background-color: rgb(70,70,70);
+    color: rgb(205, 205, 205);
+    padding: 5px;
+}
+
+.newStuff div select option
+{
+    color: rgb(205, 205, 205);
+    border-radius: 10px;
+}
+
+#embed
+{
+    margin-top: 0;
+    width: 430px;
+    height: 180px;
+}
