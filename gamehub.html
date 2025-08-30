@@ -11,9 +11,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
         <script src="js/main.js"></script>
+        <script src="js/gameFetchApi.js"></script>
     </head>
 
-    <body onload="checkCookie(), loadGames()">
+    <body onload="checkCookie(), loadGames(), newGame(fetchDataFromTable())">
         <div class="header">
             <a href="index.html"><img id="logoIcon" alt="DBG Logo - Home" src="imgs/logoIcon.png"></a>
 
