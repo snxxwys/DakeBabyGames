@@ -9,22 +9,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-        <script>
-            document.getElementById("submit").addEventListener("click", async () => {
-            const name = document.querySelector(".newGame input").value;
-            const category = document.querySelector(".newGame select").value;
-            const embed = document.querySelector("#embed").value;
-
-            const game = { name, category, embed };
-
-            await fetch("/api/games", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(game),
-            });
-
-                alert("Game saved!");
-            });
+        <script type="importmap">
+        {
+            "imports": {
+                "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+            }
+        }
         </script>
     </head>
 
@@ -33,9 +23,9 @@
 
         <div class="newStuff">
             <div class="newGame">
-                <input placeholder="Game Name">
+                <input placeholder="Game Name" id="gameName">
                 
-                <select>
+                <select id="category">
                     <option>Category</option>
 
                     <option>Skill/Strategy</option>
@@ -52,6 +42,10 @@
 
                 <textarea placeholder="Embed Code" id="embed"></textarea>
 
+                <form>
+                    <input type="file" id="uploadedImg" name="uploadedImg" accept="image/*,.pdf">
+                </form>
+
                 <button id="submit">Add Game</button>
             </div>
 
@@ -60,6 +54,8 @@
                 <input placeholder="Review IMG">
             </div>
         </div>
+
+        <script type="module" src="js/gameUploadApi.js"></script>
     </body>
 
 </html>
