@@ -10,12 +10,17 @@ function newGame(name) {
   const span = document.createElement('span')
   const img = document.createElement('img')
   const h3 = document.createElement('h3')
-  img.src = 'imgs/warning.png'
+  img.src = getImageUrl(name);
   img.alt = name
   h3.textContent = name
   span.appendChild(img)
   span.appendChild(h3)
   gameList.appendChild(span)
+}
+
+function getImageUrl(gameName) {
+  const fileName = gameName.toLowerCase().replace(/\s+/g, '') + '.png'
+  return `https://hvgjigwtjzkvznmxfrgk.supabase.co/storage/v1/object/public/game-images/${fileName}`
 }
 
 async function loadGames() {
