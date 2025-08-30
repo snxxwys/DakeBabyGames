@@ -1,9 +1,41 @@
 <html>
     <head>
         <title>Dake Baby Games</title> 
+
+        <link rel="stylesheet" href="css/game.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <script src="js/main.js"></script>
     </head>
 
-    <body>
-        <div id="gameDetail"></div>
+    <body onload="checkCookie()">
+
+        <div class="header">
+            <a href="index.html"><img id="logoIcon" alt="DBG Logo - Home" src="imgs/logoIcon.png"></a>
+
+            <nav class="topbar">
+                <a id="selected" href="index.html">Home</a>
+                
+                <a href="gamehub.html">Game Hub</a>
+                
+                <a href="contact.html">Contact</a>
+                
+                <a>Report Form</a>
+            </nav>
+
+            <button class="darkmodebutton" type="button" onclick="toggleDarkMode()"><img src="imgs/moon.png" class="darkmodeimage"></button>
+        </div>
+
+        <h1 id="gameName">Game Name</h1>
+
+        <div class="gameEmbed">
+            <iframe class="gameEmbed"></iframe>
+        </div>
+
     </body>
 </html>
