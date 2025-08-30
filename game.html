@@ -34,8 +34,31 @@
         <h1 id="gameName">Game Name</h1>
 
         <div class="gameEmbed">
-            <iframe class="gameEmbed"></iframe>
+            <iframe class="gameEmbed" scrolling="no" src=""></iframe>
         </div>
+
+       <script type="module">
+            import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+            const SUPABASE_URL = 'https://hvgjigwtjzkvznmxfrgk.supabase.co'
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2Z2ppZ3d0anprdnpubXhmcmdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY0NzkyNzksImV4cCI6MjA3MjA1NTI3OX0.OeQ_4UPRqTepNp36CG8RwEnb1kgdHNGIzt8NR0gM6fw'
+
+            const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+            const params = new URLSearchParams(window.location.search)
+            const title = params.get('title')
+
+            if (title) {
+                document.getElementById('gameName').textContent = title
+                const { data, error } = await supabase
+                    .from('games')
+                    .select('embedCode')
+                    .eq('name', title)
+                    .single()
+            if (!error && data) {
+                document.querySelector('iframe.gameEmbed').src = data.embedCode
+            }
+            }
+        </script>
 
     </body>
 </html>

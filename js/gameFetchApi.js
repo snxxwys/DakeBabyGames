@@ -15,6 +15,11 @@ function newGame(name) {
   h3.textContent = name
   span.appendChild(img)
   span.appendChild(h3)
+
+  span.addEventListener('click', () => {
+    window.location.href = `game.html?title=${encodeURIComponent(name)}`
+  })
+
   gameList.appendChild(span)
 }
 
