@@ -34,7 +34,7 @@
         <h1 id="gameName">Game Name</h1>
 
         <div class="gameEmbed">
-            <iframe class="gameEmbed" scrolling="no" src=""></iframe>
+            <iframe class="gameEmbed" scrolling="no" src="" allowfullscreen="true"></iframe>
         </div>
 
        <script type="module">
@@ -55,7 +55,11 @@
                     .eq('name', title)
                     .single()
             if (!error && data) {
-                document.querySelector('iframe.gameEmbed').src = data.embedCode
+                if (data.embedCode.startsWith('https')) {
+                    document.querySelector('iframe.gameEmbed').src = data.embedCode
+                } else {
+                    document.querySelector('iframe.gameEmbed').srcdoc = data.embedCode
+                }
             }
             }
         </script>
