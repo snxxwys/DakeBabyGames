@@ -1,0 +1,324 @@
+:root
+{
+    --spinSpeed: 3s;
+    --h2Size: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 235, 235);
+    transition: .3s ease;
+
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hidden
+{
+    display: none !important;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+}
+
+.darkmode a
+{
+    color: rgb(235, 235, 235);
+}
+
+.darkmode
+{
+    background-color: rgb(42, 42, 42);
+    color: rgb(235, 235, 235);
+    transition: all .3s ease;
+}
+
+.header
+{
+    background-color: rgb(235, 235, 235);
+    overflow: hidden;
+    top: 0;
+    padding: 20px 10px;
+    width: rh;
+    height: 50px;
+    margin: 10px auto;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+.darkmode .header
+{
+    background-color: rgb(42, 42, 42);
+    transition: all .3s ease;
+}
+
+.topbar
+{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 0 auto;
+    color: #121212; 
+}
+
+.darkmode .topbar
+{
+    color: #d7d7d7
+}
+
+#selected
+{
+    font-weight: 800;
+    color: #121212;
+}
+
+.darkmode #selected
+{
+    color: rgb(235, 235, 235);
+}
+
+.darkmodeimage {
+    filter: invert(0%);
+    transition: filter 0.3s ease;
+    width: 40px
+}
+
+body.darkmode .darkmodeimage {
+    filter: invert(100%);
+    width: 43px
+}
+
+.darkmodebutton
+{
+    border: 0;
+    background-color: transparent;
+}
+
+#logoIcon
+{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.igLogo
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    background: #222222;
+    border: 6px solid #222222;
+    border-radius: 18px;
+    transition: transform .2s ease-out;
+}
+
+div.igLogo
+{
+    background: transparent;
+    border: transparent;
+}
+
+img.igLogo:hover
+{
+    transform: scale(105%);
+}
+
+#socialMenu
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    z-index: 100;
+    background:linear-gradient(0deg,rgb(21, 21, 21) 0%, rgb(40, 40, 40) 20%, rgb(40, 40, 40) 80%, rgba(21, 21, 21, 1) 100%);
+    border-radius: 20px;
+    border: 3px solid #d7d7d7;
+    box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    -moz-box-shadow: 2px 0px 80px 8px rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#socialMenu button
+{
+    width: 100px;
+    height: 100px;
+    border: transparent;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#socialMenu img
+{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+
+    background: 
+    linear-gradient(#313131) padding-box,
+    linear-gradient(to right, #00ccff, #d500f9) border-box;
+    border-radius: 50em;
+    border: 4px solid transparent;
+
+    padding: 10px;
+    border-radius: 18px;
+    transition: transform .2s ease-out;
+}
+
+#socialMenu img:hover
+{
+    transform: scale(105%);
+}
+
+.mainSection
+{
+    background: linear-gradient(0deg,rgb(21, 21, 21) 0%, rgb(40, 40, 40) 20%, rgb(40, 40, 40) 80%, rgba(21, 21, 21, 1) 100%);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle {
+    font-size: 60px;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    transition: .3s ease-out;
+    cursor: default;
+    transform: scale(170%);
+
+    background: linear-gradient(90deg, #edf72a, /* C1 */ #edf72a, /* C2 */ #367cf5, /* C3 */ #367cf5, /* C4 */ #367cf5, /* C5 */ #edf72a, /* C6 */ #edf72a /* C7 */);
+    
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: animateGradient 9.2s linear infinite;
+    transition: transform .3s ease;
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+#mainTitle:hover
+{
+    transform: scale(180%);
+    --spinSpeed: 1s;
+    --h2Size: 110%;
+}
+
+.scrollDots
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-image: radial-gradient(circle at 5px 5px, #b7b7b7 2px, transparent 3px);
+    background-size: 50px 50px;
+    z-index: 0;
+
+    animation: move-background 1s linear infinite;
+}
+
+@keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50px 50px;
+  }
+}
+
+#brokenGame
+{
+    background-color: #df7a7a;
+    height: 170px;
+    display: flex;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+#brokenGame img
+{
+    height: 170px;
+    width: 170px;
+}
+
+#brokenGame button
+{
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition: .3s all linear;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #f03535;
+    height: 58px;
+    align-self: center;
+    margin-left: auto;      
+}
+
+#brokenGame button:hover
+{
+    transform: scale(1.04);
+    background-color: #ed5656;
+}
+
+#brokenInfo
+{
+    padding: 0 10px;
+    margin: 10px;
+    width: 800px;
+    color: #363636;
+}
