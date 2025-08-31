@@ -430,6 +430,12 @@ img.igLogo:hover
     margin-left: auto;
 }
 
+.reviewDiv a
+{
+    align-self: center;
+    margin-left: auto;  
+}
+
 .reviewDiv button:hover
 {
     transform: scale(1.04);

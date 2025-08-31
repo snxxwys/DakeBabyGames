@@ -309,6 +309,12 @@ img.igLogo:hover
     margin-left: auto;      
 }
 
+#brokenGame a
+{
+    align-self: center;
+    margin-left: auto;  
+}
+
 #brokenGame button:hover
 {
     transform: scale(1.04);
