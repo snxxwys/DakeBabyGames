@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dake Baby Games | News</title>
+        <link rel="icon" href="imgs/logoIcon.png">
+        <link rel="stylesheet" href="css/dakebabynews.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+        <script src="js/main.js"></script>
+    </head>
+
+    <body onload="checkCookie()">
+        <div class="header">
+            <a href="index.html"><img id="logoIcon" alt="DBG Logo - Home" src="imgs/logoIcon.png"></a>
+
+            <nav class="topbar">
+                <a href="index.html">Home</a>
+                
+                <a href="gamehub.html">Game Hub</a>
+                
+                <a href="forms.html">Forms</a>
+                
+                <a id="selected" href="dakebabynews.html">DakeBabyNews</a>
+            </nav>
+
+            <button class="darkmodebutton" type="button" onclick="toggleDarkMode()"><img src="imgs/moon.png" class="darkmodeimage"></button>
+        </div>
+
+        <button class="igLogo" onclick="toggleSocialMenu()" type="button">
+            <img src="imgs/igLogo.png" class="igLogo">
+        </button>
+
+        <div id="socialMenu" class="hidden">
+            <button onclick=" window.open('https://www.instagram.com/@dakebabygames', '_blank')" type="button"><img src="imgs/igLogo.png"></button>
+            <button onclick=" window.open('https://www.tiktok.com/@dake.baby.games', '_blank')" type="button"><img src="imgs/tiktokLogo.png"></button>
+        </div>
+
+       <div class="mainSection">
+            <h2 id="mainTitle">DakeBabyNews</h2>
+            
+            <span class="scrollDots"></span>
+       </div>
+
+       <div id="brokenGame">
+            <img src="imgs/namebabygames.png" alt="warning">
+
+            <div id="brokenInfo">
+                <h2 style="font-weight: 800;">NameBabyGames</h2>
+                <p>
+                    NameBabyGames is a new program we're running where you get to display your name in place of "Dake" throughout the whole entire website for a day.
+                    <br><br>
+                    ie; HenryBabyGames. If you're interested in this, please fill out the form.
+                </p>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchrxhCjR-hJwbWLP7TDaOvgB7Rjj0uDvBNzAX2CnN41EBvUA/viewform?usp=dialog" target="_blank">
+                <button type="button">NameBabyGames Form</button>
+            </a>
+       </div>
+
+       <div id="crosswordDiv">
+            <div>
+                <h2>New DBG Crossword!</h2>
+                <p>
+                    Try out our new DBGa themed crossword! If you beat it, email us with proof at <u>dakebabygames@gmail.com</u> and we will put your name on the website!
+                    <br><br>
+                    <strong>People who have beat it:</strong>
+                    <br><br>
+                    Reese - Beats it at least 60 times a day
+                    <br><br>
+                    Tank - Beats it 2-3 times a day
+                    <br><br>
+                    Noah - Beats it one time a day 
+                    <br><br>
+                    Logan - Has beat it once 
+                    <br><br>
+                    Simon - Beats it at around 120 BPM
+                    <br><br>
+                    Hannah - Beats it on a regular interval 
+                </p>
+            </div>
+
+            <img id="crossword" src="imgs/crossword.png">
+       </div>
+
+       <div id="standings">
+            <p>
+                <strong>Current Play Tester Standings</strong>
+                <br><br>
+                1. Asis Aden
+                <br><br>
+                2. Tank Nagel
+                <br><br>
+                3. Avery Vinlow
+            </p>
+
+            <img src="imgs/podium.png">
+       </div>
+    </body>
+</html>
