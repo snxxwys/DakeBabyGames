@@ -37,6 +37,8 @@
             <iframe class="gameEmbed" scrolling="no" src="" allowfullscreen="true"></iframe>
         </div>
 
+        <button id="fullscreen"><h3>Fullscreen</h3></button>
+
        <script type="module">
             import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
@@ -62,6 +64,19 @@
                 }
             }
             }
+
+            document.getElementById('fullscreen').addEventListener('click', () => {
+            const iframe = document.querySelector('iframe.gameEmbed');
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) { /* Firefox */
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+                    iframe.msRequestFullscreen();
+                }
+            });
         </script>
 
     </body>

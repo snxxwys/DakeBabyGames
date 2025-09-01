@@ -133,7 +133,7 @@ body.darkmode .darkmodeimage {
 .gameEmbed
 {
     width: 1000px;
-    height: 700px;
+    height: 563px;
     background: #d7d7d7;
     display: flex;
     justify-content: center;
@@ -147,4 +147,30 @@ body.darkmode .darkmodeimage {
 .gameEmbed iframe
 {
     margin-top: auto;
+}
+
+#fullscreen
+{
+    width: 1000px;
+    height: 50px;
+    display: flex;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(82, 82, 82);
+    color: #d7d7d7;
+    border: transparent;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    
+    transition: all .2s linear;
+}
+
+#fullscreen:hover
+{
+    background-color: rgb(95, 95, 95);
 }
