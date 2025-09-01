@@ -117,12 +117,32 @@ body
     padding: 1px;
 }
 
+#submitReview
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    margin-top: 20px;
+    border: transparent;
+    background-color: rgb(70,70,70);
+    color: white;
+    padding: 1px;
+}
+
 .newStuff div form
 {
     text-align: left;
 }
 
 #uploadedImg
+{
+    height: 20px;
+    align-self: flex-start;
+    text-align: left;
+}
+
+#uploadedImgReview
 {
     height: 20px;
     align-self: flex-start;
