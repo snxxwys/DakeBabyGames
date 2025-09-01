@@ -2,6 +2,7 @@
 {
     --spinSpeed: 3s;
     --h2Size: 100%;
+    --cycleSpeed: 9.2s;
 }
 
 body
@@ -213,6 +214,11 @@ img.igLogo:hover
     align-items: center;
 }
 
+#contactUs
+{
+    text-align: center;
+}
+
 #mainTitle {
     font-size: 60px;
     z-index: 1;
@@ -228,7 +234,7 @@ img.igLogo:hover
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: animateGradient 9.2s linear infinite;
+    animation: animateGradient var(--cycleSpeed) linear infinite;
     transition: transform .3s ease;
 }
 
@@ -244,8 +250,7 @@ img.igLogo:hover
 #mainTitle:hover
 {
     transform: scale(180%);
-    --spinSpeed: 1s;
-    --h2Size: 110%;
+    --cycleSpeed: 2s;
 }
 
 .scrollDots
