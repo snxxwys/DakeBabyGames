@@ -134,6 +134,60 @@ async function uploadReview() {
 }
 
 
+async function checkPassword() {
+    const { data, error } = await supabase.from('passwords').select('password')
+        if (error) {
+            console.error('Error fetching data:', error.message)
+        return
+    }
+
+    const password = document.getElementById('password')
+    if (password.value) {
+        if (password.value == data[0].password) {
+            document.getElementById('passwordDiv').classList.add('hidden')
+            setCookie("password", "true", 365);
+        } else {
+            alert('Password Incorrect')
+        }
+    } else {
+        alert('Enter Password')
+    }
+}
+
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let password = getCookie("password");
+
+  if (password === "true") {
+    document.getElementById('passwordDiv').classList.add('hidden');
+  } else {
+    document.getElementById('passwordDiv').classList.remove('hidden');
+  }
+}
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('submit').addEventListener('click', uploadGame)
@@ -141,4 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('submitReview').addEventListener('click', uploadReview)
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
+    checkCookie()
 })
