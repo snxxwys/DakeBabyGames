@@ -10,21 +10,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
+
         <script src="js/main.js"></script>
 
-        <script type="importmap">
-        {
-            "imports": {
-                "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
-            }
-        }
-        </script>
-
-        <script type="module" src="js/gameFetchApi.js"></script>
     </head>
 
-    <body onload="checkCookie(), loadGames()">
+    <body onload="checkCookie()">
         <div class="header">
             <a href="index.html"><img id="logoIcon" alt="DBG Logo - Home" src="imgs/logoIcon.png"></a>
 
@@ -57,8 +48,8 @@
        </div>
 
        <div class="secondaryDiv">
-            <a href="game.html?title=Level Devil">
-                <img src="imgs/gotw.png" class="frontPageIMG">
+            <a href="#nogo">
+                <img src="imgs/gotw.png" class="frontPageIMG" id="gotw">
             </a>
             <div class="aboutDBG">
                 <h2 style="font-weight: 800;">Game of the Week: Level Devil</h2>
@@ -87,7 +78,37 @@
             </a>
        </div>
 
-       <div class="gameList">
-       </div>
+       <div class="game">
+            <h2 id="gameTitle">Game Title</h2>
+            
+            <div class="iframediv">
+                <iframe id="gameFrame"></iframe>
+            </div>
+
+            <div class="buttons">
+                <!--<button id="prevBtn">◀ Previous</button>-->
+                <!--<button id="nextBtn">Next ▶</button>-->
+                <button id="random">Random Game</button>
+                <button id="fullscreen">Fullscreen</button>
+                <button id="aboutb">Open in About Blank</button>
+                <button id="favorite">Favorite</button>
+                <!--<button id="downloadBtn">💾 Download</button>-->
+                <!--<button id="copyBtn">📋 Copy Code</button>-->
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="favoritesContainer">
+            <h2>Favorites</h2>
+            <div id="favoritesList" style="display:flex; gap:12px; flex-wrap: wrap;"></div>
+        </div>
+
+        <hr>
+
+        <div id="gameList">
+        </div>
+
+        <script src="js/gameHandler.js"></script>
     </body>
 </html>
